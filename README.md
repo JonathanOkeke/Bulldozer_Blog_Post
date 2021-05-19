@@ -2,6 +2,7 @@
 ![](images/bulldozer.jpeg)
 ## 0. Introduction
 **In this mini Data Science project, I sought to develop a model that can predict the price of a Bulldozer today using historical data.**  
+- You can read the analysis in article format here : https://jonathan-okeke.medium.com/bulldozer-sale-prices-in-the-us-cf6a69812c78
 ## 1. Problem Definition
 **This analysis was approached from the point of view of a company wanting to sell it inventory of used bulldozers at auctions around the USA.**  
 
