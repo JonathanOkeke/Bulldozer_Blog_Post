@@ -1,4 +1,5 @@
 # Bulldozer Sale Prices in the USA
+![](images/bulldozer.jpeg)
 ## 0. Introduction
 **In this mini Data Science project, I sought to develop a model that can predict the price of a Bulldozer today using historical data.**  
 ## 1. Problem Definition
