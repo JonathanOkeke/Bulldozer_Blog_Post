@@ -71,7 +71,7 @@ A company looking to sell bulldozers may consider filling most of their inventor
 
 ### 4.3 What is the "best" time of the year to sell a bulldozer on average ?
 #### Mean Sale Price Variation Across the Months of the Year for each of the Bulldozer Class Types
-![](class_month_sales.png)  
+![](images/class_month_sales.png)  
 The analysis above revelaed that :
 - The months of March and February respectively, recoreded the highest number of sales across the 30 years.
 - The months of February, January and May respectively, recorded the highest mean sale price of a bulldozer in general.
