@@ -99,6 +99,26 @@ For this investigation I modelled the data using :
 - After training all three models , I opted to use the Xgboost Regressor model since it had the highest R^2 score and lowest MAE of all three models prior to any tuning.
 - I then tuned the Xgb Regressor model using Sci-kit learn's `Randomized Search CV` which delivered a final model with a r^2 score of 0.514 and an MAE of 11,483.77.
 ### Feature Importances
-Feature importance seeks to establish which features had the most significant effect on the **target** feature that is to be predicted ->`SalesPrice`.  
+Feature importance seeks to establish which features had the most significant effect on the **target** feature that is to be predicted (`SalesPrice`).  
+The feature importance values represent the coefficients for the feature variables that the model learnt during training. The higher the value, the more significant of an effect it had towards the model's sale price prediction calculations.  
+![](images/features.png)  
+The feature importance analysis revealed that the features that most significantly determined the sale price of a bulldozer in the United States in descending order are:
+1. The **Model/Class type** of the bulldozer.
+2. The **Age**  of the bulldozer at the time of the sale.
+3. The **State**  in which the bulldozer was sold in.  
+## 6.Summary of Findings
+## Final Remarks on Business Questions
 
-The feature importance values represent the coefficients for the feature variables that the model learnt during training. The higher the value, the more significant of an effect it had towards the model's sale price prediction calculations.
+### Question 1: What is the best State to sell a bulldozer in wrt sale price ?
+The analysis done to answer this question revealed that **North Dakota** recorded the highest mean sale price across all the bulldozer classes.  
+These findings may incentivise a company that re-sells used bulldozers to focus on selling their bulldozers in auctions held in North Dakota.
+
+### Question 2: What is the sale price variation across diffferent bulldozer models of the same age and usage ?
+The analysis done to answer this question revealed that the **Motor Grader** class of bulldozers had the highest mean sale price across all of the bulldozer classes of the same age and usage (hours).  
+
+As mentioned earlier, these findings could suggest that a company should fill out most of their inventory with Motor Graders as this class of bulldozers generally sells for more on average.
+
+### Question 3: What is the "best" time of the year to sell a bulldozer on average ?
+The analysis revealed that on average, the month that recorded the highest mean sale price of bulldozers across all bulldozer classes, ages and uasge levels was the month of **February**  
+
+Moreover, the analysis revealed that **Thursday** was the day that recorded the highest mean bulldozer sale price.
