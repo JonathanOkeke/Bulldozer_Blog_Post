@@ -46,12 +46,59 @@ The evaluation metrics used for determining the accauracy and reliability of the
 ## 4. Answering the Business Questions
 ### 4.1 For bulldozers of similar age , usage and model type, is their sale price  dependant on where / what State the bulldozer is sold from ? If so , in which State can we expect to get the best price for our bulldozer ?  
 The analysis of the mean sale price for each bulldozer type revealed that:  
-
+![](images/state_sales.png)
 - Generally speaking, it would be more advisable for the company to sell their bulldozers in **North Dakota**. This is beacuase **bulldozers sell for a higher price , on average in North Dakota**.  
-
 - **For Motor Graders**: The best state to sell in is **South Dakota**.
 - **For Wheel Loaders**: The best state to sell in is **Rhode Island**.
 - **For Tractors**: The best state to sell in is **Nevada**.
 - **For Excavators**: The best state to sell in is **North Dakota**.
 - **For Backhoe Loaders**: The best state to sell in is **South Dakota**.
 - **For Skid Steer Loaders**: The best state to sell in is **Rhode Island**.
+### 4.2 What is the sale price variation across different bulldozer models of the same age and usage ?
+![](images/class_sales.jpg)  
+The table above highlights that on average the rankings for the bulldozer classes of the same age ito mean sale price is:
+1. Motor Graders.
+2. Wheel Loaders.
+3. Tractors.
+4. Excavators.
+5. BackHoe Loaders.
+6. Skid Steer Loaders.
+
+#### Take-Aways
+Of all the bulldozer classes, `Motor graders` seem to hold their values best over the course of their lifetime usage.  
+A company looking to sell bulldozers may consider filling most of their inventory with Motor graders.  
+
+### 4.3 What is the "best" time of the year to sell a bulldozer on average ?
+#### Mean Sale Price Variation Across the Months of the Year for each of the Bulldozer Class Types
+![](class_month_sales.png)  
+The analysis above revelaed that :
+- The months of March and February respectively, recoreded the highest number of sales across the 30 years.
+- The months of February, January and May respectively, recorded the highest mean sale price of a bulldozer in general.
+- Thursday was the day in which most of the sales were undertaken across the thirty years.
+- There was no significant relationship between the day of week in which a sale were underatken and the mean sale price
+- Across each and every individual bulldozer class type, the months of January and February recorded the highest mean sale price for the repsective bulldozer class types
+
+### Take-Aways
+In general the best time of the year to sell a bulldozer according to the class their belong to are as follows:
+1. Motor Graders - January
+2. Wheel Loaders - January
+3. Tractors - January & February
+4. Excavators - January
+5. BackHoe Loaders - January, February and August
+6. Skid Steer Loaders - January & February
+
+In general the best day of the week to sell a bulldozer is on a Thursday.
+## 5. Modelling
+### Models I used for the project
+For this investigation I modelled the data using :
+1. `Random Forest Regressor` (Member of the `Decision Tree` family of regression models)
+2. `Ridge Regressor` (Member of the Linear model family)
+3. `XGB Regressor` (Member of the `Gradient Boosted` family of regression models)
+
+- I compared the performance of each of the models and used the model with the highest `R^2 score` & lowest `MAE score`.  
+- After training all three models , I opted to use the Xgboost Regressor model since it had the highest R^2 score and lowest MAE of all three models prior to any tuning.
+- I then tuned the Xgb Regressor model using Sci-kit learn's `Randomized Search CV` which delivered a final model with a r^2 score of 0.514 and an MAE of 11,483.77.
+### Feature Importances
+Feature importance seeks to establish which features had the most significant effect on the **target** feature that is to be predicted ->`SalesPrice`.  
+
+The feature importance values represent the coefficients for the feature variables that the model learnt during training. The higher the value, the more significant of an effect it had towards the model's sale price prediction calculations.
